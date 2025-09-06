@@ -1,6 +1,6 @@
 # Project 15: Observability Stack
 
-Elasticsearch cluster on Kubernetes with Logstash and Kibana. Fluentd DaemonSet for log collection. Prometheus and Grafana for metrics. Index lifecycle management.
+Elasticsearch cluster on Kubernetes with Logstash and Kibana. Fluentd DaemonSet for log collection. Prometheus and Grafana for metrics. Multi-environment Terraform deployment.
 
 ## Technologies
 
