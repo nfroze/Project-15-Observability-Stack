@@ -1,0 +1,51 @@
+# Elasticsearch values
+elasticsearch:
+  replicas: 1
+  minimumMasterNodes: 1
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1Gi"
+    limits:
+      cpu: "1000m"
+      memory: "2Gi"
+  volumeClaimTemplate:
+    accessModes: ["ReadWriteOnce"]
+    resources:
+      requests:
+        storage: 10Gi
+  service:
+    type: LoadBalancer
+
+# Kibana values
+kibana:
+  elasticsearchHosts: "http://elasticsearch-master:9200"
+  service:
+    type: LoadBalancer
+    port: 5601
+
+# Logstash values
+logstash:
+  service:
+    type: ClusterIP
+  logstashConfig:
+    logstash.yml: |
+      http.host: 0.0.0.0
+  logstashPipeline:
+    logstash.conf: |
+      input {
+        beats {
+          port => 5044
+        }
+      }
+      filter {
+        mutate {
+          add_field => { "environment" => "dev" }
+        }
+      }
+      output {
+        elasticsearch {
+          hosts => ["http://elasticsearch-master:9200"]
+          index => "k8s-logs-%{+YYYY.MM.dd}"
+        }
+      }
