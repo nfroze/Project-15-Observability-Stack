@@ -8,11 +8,18 @@ AWS EKS • Terraform • Prometheus • Grafana • Elasticsearch • Logstash 
 
 ## Screenshots
 
-- [EKS cluster in AWS Console](screenshots/eks-cluster.png)
-- [Terraform deployment](screenshots/terraform-apply.png)
-- [All pods running across namespaces](screenshots/all-pods-running.png)
-- [Grafana dashboard with metrics](screenshots/grafana-dashboard.png)
-- [Prometheus targets](screenshots/prometheus-targets.png)
-- [Kibana homepage](screenshots/kibana-homepage.png)
-- [Kibana Discover with logs](screenshots/kibana-discover-logs.png)
-- [Git feature branches](screenshots/git-branches.png)
+![EKS cluster in AWS Console](screenshots/eks-cluster.png)
+
+![Terraform deployment](screenshots/terraform-apply.png)
+
+![All pods running across namespaces](screenshots/all-pods-running.png)
+
+![Grafana dashboard with metrics](screenshots/grafana-dashboard.png)
+
+![Prometheus targets](screenshots/prometheus-targets.png)
+
+![Kibana homepage](screenshots/kibana-homepage.png)
+
+![Kibana Discover with logs](screenshots/kibana-discover-logs.png)
+
+![Git feature branches](screenshots/git-branches.png)
