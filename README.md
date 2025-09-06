@@ -1,6 +1,6 @@
 # Project 15: Observability Stack
 
-Comprehensive monitoring and logging platform on AWS EKS with Prometheus/Grafana for metrics and ELK Stack for centralized logging. Fluentd DaemonSet for log collection. Terraform infrastructure as code.
+Comprehensive monitoring and logging platform on AWS EKS with Prometheus/Grafana for metrics and ELK Stack for centralised logging. Fluentd DaemonSet for log collection. Terraform infrastructure as code.
 
 ## Technologies
 
